@@ -3,6 +3,8 @@ body {
   font-family: Open Sans, sans-serfi;
 }
 
+
+
 html {
   background-color: antiquewhite ;
 }
@@ -34,107 +36,134 @@ header {
 
 /*Menu Contextual*/
 
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+/*Carousel*/
+.carousel-item img {
+  width: 100%;          /* ocupa todo el ancho del carousel */
+  height: 300px;        /* altura fija (ajustala a tu gusto) */
+  object-fit: cover;    /* recorta sin deformar */
 }
 
-.sidebar li {                            
-  margin-bottom: 15px;                   /* Espacio entre las li */
-}
-
-.sidebar a:hover {
-  background-color: #ddd;              /* Efecto al pasar el mouse */
-}
-
-.sidebar {                               
-  border-style: groove;                /*Estilo del borde*/
-  border-color: navajowhite;         /*Color del borde*/
-  border-radius: 15px;                 /*Redondeado del menú*/
-  border-width: 3px;                   /*Grosor del borde*/
-  max-width: 180px;                    /*Grosor del sidebar*/
-  padding: 20px;                       /*Separacion del texto del borde*/
-  padding-bottom: 20px;                /*Separacion del texto del borde de abajo*/
-  font-size: 18px;                     /*Tamaño del texto*/
-  margin: 20px;                        /*Separacion del HTML*/
-  width: 200px;                        /*Ancho fijo para el menú */
-}
-
-.sidebar a {
-  color: black;
-  text-decoration: none; 
-  font-weight: bold;
-}
-
-.maicena {
+.carousel-item {
   display: flex;
-  justify-content: center;
-  position: relative;
-  height: 120px;
+  justify-content: center; /* centra horizontalmente */
+  padding: 20px;
+}
+
+#carouselExampleIndicators {
+  max-width: 800px;  /* ancho máximo del carousel */
+  margin: 0 auto;    /* centra horizontalmente */
 }
 
 /*Cartas de Recetas*/
 
+.contenedor-cartas {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(300px, 3fr));
+  grid-template-areas: "brownie lemonpie bizcochuelo";
+  gap: 5%;
+  margin: 30px;
+}
+
+.brownie { grid-area: brownie; }
+.lemonpie { grid-area: lemonpie; }
+.bizcochuelo { grid-area: bizcochuelo; }
+
 .card {
-  width: 250px;
-  background-color: #fff8e1;
-  border: 1px solid #ddd;
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 16px;
-  text-align: center;
-  transition: transform 0.2s;
+  display: block;             
+  text-decoration: none;      
+  color: inherit;             
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;           
+  background: #fff;
+  text-align: center;        
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.15); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-  transform: scale(1.03);
+  transform: translateY(-8px); 
+  box-shadow: 6px 12px 20px rgba(0,0,0,0.25);
+  cursor: pointer; 
 }
 
-.card-img {
+.card:active {
+  transform: translateY(-3px);                
+  box-shadow: 4px 8px 12px rgba(0,0,0,0.2);
+}
+
+.card img {                    
   width: 100%;
-  border-radius: 10px;
-  margin-bottom: 12px;
+  height: 240px;               
+  object-fit: cover;          
 }
 
-.card-titulo {
-  font-size: 18px;
-  margin: 10px 0 6px;
+.card h3 {                     
+  margin: 10px;
+  font-size: 18px;  
 }
 
-.card-descripcion {
-  font-size: 14px;
-  color: #555;
-  margin-bottom: 10px;
-}
+/*Footer*/
 
-.card-boton {
-  background-color: #ffc107;
-  color: #000;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.card-boton:hover {
-  background-color: #ffb300;
-}
-
-.contenedor-flex {
-  display: flex;                   
-  gap: 20px;                       /*Espacio entre sidebar y contenido*/
-  align-items: flex-start;         /*Para que ambos empiecen alineados arriba*/
-}
-
-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: #34699A;
-  padding: 15px;
+.footer {
+  background-color: rgba(0, 0, 0, 0.5);  
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #f1f1f1;   
   text-align: center;
-  z-index: 1000;                /* para que quede por encima */
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.footer-content {
+  max-width: 900px;
+  margin: auto;
+}
+
+.footer-links a {
+  color: #f1f1f1;         
+  text-decoration: none;
+  font-weight: bold;      
+  transition: color 0.3s ease;
+  margin: 15px;
+}
+
+.footer-links a:hover {
+  color: #74ACDF;         
+}
+
+.practicas-higiene {
+  margin: 50px;
+}
+
+.sobre-mi {
+  margin: 50px;
+}
+
+.brownies-rapidos {
+  margin: 50px;
+}
+
+.bizcochuelos {
+  margin: 50px;
+}
+
+.lemon_pies {
+margin: 50px;
+}
+
+.content {
+  min-height: calc(100vh - 140px); /* 100px = altura del footer */
+}
+
+@media (max-width: 480px) {
+  .contenedor-cartas {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "brownie"
+      "lemonpie"
+      "bizcochuelo";
+    gap: 10px;
+    margin: 10px auto;
+  }
 }
