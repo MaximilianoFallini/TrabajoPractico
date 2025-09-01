@@ -1,0 +1,17 @@
+// Carousel
+#carouselExampleIndicators {
+  max-width: 800px;  
+  margin: 0 auto;    
+
+  img {
+    width: 100%;          
+    height: 300px;       
+    object-fit: cover;
+  }
+
+  .slide-content {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+}

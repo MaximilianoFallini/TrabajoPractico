@@ -1,0 +1,29 @@
+// Footer
+.footer {
+    background-color: rgba(0, 0, 0, 0.5);  
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #f1f1f1;   
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+        .footer-content {
+        max-width: 900px;
+        margin: auto;
+        .footer-links a {
+        color: #f1f1f1;         
+        text-decoration: none;
+        font-weight: bold;      
+        transition: color 0.3s ease;
+        margin: 15px;
+            &:hover {
+            color: #74ACDF;         
+            }
+        }
+    }
+}
+
+// Footer siempre abajo
+.content {
+  min-height: calc(100vh - 100px); /* 100px = altura del footer */
+}

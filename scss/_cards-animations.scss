@@ -1,0 +1,15 @@
+// Card animation
+@mixin card-animation($hover-y, $hover-shadow, $active-y, $active-shadow) {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY($hover-y);
+    box-shadow: $hover-shadow;
+    cursor: pointer;
+  }
+
+  &:active {
+    transform: translateY($active-y);
+    box-shadow: $active-shadow;
+  }
+}

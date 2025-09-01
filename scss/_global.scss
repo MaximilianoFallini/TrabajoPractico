@@ -1,0 +1,10 @@
+// Margin for pages recipes
+@use "_variables.scss" as v;
+
+.practicas-higiene,
+.sobre-mi,
+.brownies-rapidos,
+.bizcochuelos,
+.lemon_pies {
+  margin: v.$espaciado; 
+}
