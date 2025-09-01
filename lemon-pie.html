@@ -7,7 +7,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DulceWeb - Recetas</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="scss/main.css" />
   <link rel="icon" href="./images/sol-png.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +16,7 @@
 </head>
 
 <body background="images/wallpaperblur.png">
-
+<div class="content">
 <!--Encabezado-->
   <div class="banderabottomtop"></div>
     <div class="banderamid">
@@ -27,11 +27,10 @@
   <div class="banderabottomtop"></div>
 
 <!--Menu Contextual-->
-<nav class="navbar navbar-expand-lg navbar-light" style="
+  <nav class="navbar navbar-expand-lg navbar-light" style="
     background-color: rgba(255, 255, 255, 0.05); 
     backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-">
+    -webkit-backdrop-filter: blur(15px);">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">DuceWeb</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -56,32 +55,33 @@
     </div>
   </nav>
 
-<article class="lemon_pies">
+  <article class="lemon_pies">
     <h2>3. Lemon Pie 🍋🥧</h2>
 
-<h3>Ingredientes:</h3>
-<ul>
-    <li>🌾 200 g de galletitas tipo María o digestivas</li>
-    <li>🧈 100 g de manteca derretida</li>
-    <li>🥚 3 huevos</li>
-    <li>🍋 150 ml de jugo de limón</li>
-    <li>🍬 150 g de azúcar</li>
-    <li>🥛 200 ml de crema de leche</li>
-    <li>🍦 Ralladura de 1 limón (opcional)</li>
-</ul>
+  <h3>Ingredientes:</h3>
+    <ul>
+      <li>🌾 200 g de galletitas tipo María o digestivas</li>
+      <li>🧈 100 g de manteca derretida</li>
+      <li>🥚 3 huevos</li>
+      <li>🍋 150 ml de jugo de limón</li>
+      <li>🍬 150 g de azúcar</li>
+      <li>🥛 200 ml de crema de leche</li>
+      <li>🍦 Ralladura de 1 limón (opcional)</li>
+    </ul>
 
-<h3>Preparación 👩‍🍳:</h3>
-<ol>
+  <h3>Preparación 👩‍🍳:</h3>
+  <ol>
     <li>🍪 Triturá las galletitas y mezclalas con la manteca derretida.</li>
     <li>🧁 Presioná la mezcla en la base de un molde para formar la base del pie. Refrigerá mientras preparás el relleno.</li>
     <li>🥚🍋 Batí los huevos con el azúcar y el jugo de limón hasta integrar bien.</li>
     <li>🥛 Añadí la crema de leche y, si querés, la ralladura de limón. Mezclá suavemente.</li>
     <li>🌡️ Volcá el relleno sobre la base de galleta y horneá a 160 °C por 20-25 minutos hasta que cuaje un poco.</li>
     <li>❄️ Dejá enfriar y luego refrigerá al menos 2 horas antes de servir.</li>
-</ol>
+  </ol>
 
-<p>😋 ¡Disfrutá tu Lemon Pie fresco y delicioso!</p>
-</article>
+  <p>😋 ¡Disfrutá tu Lemon Pie fresco y delicioso!</p>
+  </article>
+</div>
 
 <!--Pie de Pagina-->
 <footer class="footer">
@@ -93,7 +93,7 @@
       <a href="#">Twitter</a>
     </div>
   </div>
-</footer>
+</div>
 
 <!--Bootstrap-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
