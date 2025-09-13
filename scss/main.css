@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -27,6 +26,10 @@ header {
   position: relative;
   top: -20px;
 }
+.sol img {
+  transform: scale(1.15);
+  transform-origin: center;
+}
 
 .banderabottomtop {
   background-color: #74ACDF;
@@ -34,39 +37,35 @@ header {
   align-content: center;
 }
 
-#carouselExampleIndicators {
-  max-width: 800px;
-  margin: 0 auto;
+.h1hidden {
+  display: none;
 }
-#carouselExampleIndicators img {
+
+#carouselExampleCaptions {
+  max-width: 800px;
+  margin: 20px auto 0 auto;
+}
+#carouselExampleCaptions img {
   width: 100%;
   height: 300px;
   object-fit: cover;
 }
-#carouselExampleIndicators .slide-content {
+#carouselExampleCaptions .slide-content {
   display: flex;
   justify-content: center;
-  padding: 20px;
 }
 
 .contenedor-cartas {
   display: grid;
-  grid-template-columns: repeat(3, minmax(300px, 3fr));
-  grid-template-areas: "brownie lemonpie bizcochuelo";
-  gap: 5%;
-  margin: 30px;
-}
-.contenedor-cartas .brownie {
-  grid-area: brownie;
-}
-.contenedor-cartas .lemonpie {
-  grid-area: lemonpie;
-}
-.contenedor-cartas .bizcochuelo {
-  grid-area: bizcochuelo;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  grid-auto-rows: min-content;
+  gap: 20px;
+  margin: 30px auto;
+  max-width: 1200px;
 }
 .contenedor-cartas .card {
-  display: block;
+  display: flex;
+  flex-direction: column;
   text-decoration: none;
   color: inherit;
   border: 1px solid #ccc;
@@ -75,11 +74,10 @@ header {
   background: #fff;
   text-align: center;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 100%; /* ocupa toda la columna del grid */
-  min-width: 250px; /* evita que la carta se achique */
-  min-height: 300px; /* altura mínima */
 }
 .contenedor-cartas .card:hover {
   transform: translateY(-8px);
@@ -92,27 +90,88 @@ header {
 }
 .contenedor-cartas .card img {
   width: 100%;
-  height: 240px;
+  aspect-ratio: 4/3;
   object-fit: cover;
+  flex-shrink: 0;
 }
 .contenedor-cartas .card h3 {
   margin: 10px;
-  font-size: 18px;
+  font-size: 16px;
+  line-height: 1.3;
 }
 
-@media (max-width: 800px) {
-  .contenedor-cartas {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "brownie lemonpie" "bizcochuelo bizcochuelo";
+@keyframes rubberBand {
+  0% {
+    transform: scaleX(1);
+  }
+  30% {
+    transform: scaleX(1.25) scaleY(0.75);
+  }
+  40% {
+    transform: scaleX(0.75) scaleY(1.25);
+  }
+  50% {
+    transform: scaleX(1.15) scaleY(0.85);
+  }
+  65% {
+    transform: scaleX(0.95) scaleY(1.05);
+  }
+  75% {
+    transform: scaleX(1.05) scaleY(0.95);
+  }
+  100% {
+    transform: scaleX(1) scaleY(1);
   }
 }
-/* Móvil */
-@media (max-width: 500px) {
-  .contenedor-cartas {
-    grid-template-columns: 1fr;
-    grid-template-areas: "brownie" "lemonpie" "bizcochuelo";
-  }
+.rubberBand {
+  animation: rubberBand 1s;
 }
+
+.videotutorial {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.contact-flexbox {
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-box {
+  width: 100%;
+  max-width: 600px;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 30px;
+  border-radius: 15px;
+  color: #fff;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-nav .nav-link {
+  position: relative;
+  color: #000;
+  display: inline-block;
+  transition: color 0.3s;
+}
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background-color: #74ACDF;
+  transition: width 0.3s ease;
+}
+.navbar-nav .nav-link:hover::after, .navbar-nav .nav-link.active::after {
+  width: 100%;
+}
+
 .footer {
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
@@ -139,6 +198,86 @@ header {
 
 .content {
   min-height: calc(100vh - 100px); /* 100px = altura del footer */
+}
+
+/* VideoTutorial */
+.videotutorial {
+  display: block;
+  margin: 0 auto;
+  width: 900px;
+  height: 505px;
+}
+
+/* Tablet */
+@media (max-width: 978px) {
+  .contenedor-cartas {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: min-content;
+    gap: 15px;
+    padding: 0 30px;
+  }
+  .contenedor-cartas .card {
+    max-width: 100%;
+  }
+  .contenedor-cartas .card h3 {
+    font-size: 16px;
+  }
+  #carouselExampleCaptions {
+    padding: 0 15px;
+  }
+  .banderamid {
+    height: 35px;
+    background-color: white;
+  }
+  .banderabottomtop {
+    background-color: #74ACDF;
+    height: 35px;
+    align-content: center;
+  }
+  .footer {
+    padding: 15px;
+    margin-top: 30px;
+  }
+  .footer .footer-content .footer-links a {
+    margin: 10px;
+    font-size: 14px;
+  }
+}
+/* Mobile */
+@media (max-width: 480px) {
+  .contenedor-cartas {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .contenedor-cartas .card {
+    max-width: 100%;
+  }
+  .contenedor-cartas .card h3 {
+    font-size: 18px;
+  }
+  #carouselExampleCaptions {
+    padding: 0 15px;
+  }
+  .banderamid {
+    height: 25px;
+    background-color: white;
+  }
+  .banderabottomtop {
+    background-color: #74ACDF;
+    height: 25px;
+    align-content: center;
+  }
+  .footer {
+    padding: 10px;
+    margin-top: 20px;
+  }
+  .footer .footer-content .footer-links a {
+    margin: 8px;
+    font-size: 13px;
+  }
+  .contact-box {
+    margin: 30px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,81 @@
+/* VideoTutorial */
+.videotutorial {
+  display: block;
+  margin: 0 auto;
+  width: 900px;
+  height: 505px;
+}
+
+/* Tablet */
+@media (max-width: 978px) {
+  .contenedor-cartas {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: min-content;
+    gap: 15px;
+    padding: 0 30px;
+
+    .card {
+      h3 { font-size: 16px; }
+      max-width: 100%; 
+    }
+  }
+  #carouselExampleCaptions {
+    padding: 0 15px;
+  }
+  .banderamid {
+  height: 35px;
+  background-color: white;
+  }
+  .banderabottomtop {
+  background-color: #74ACDF;
+  height: 35px;
+  align-content: center;
+  }
+  .footer {
+  padding: 15px;
+  margin-top: 30px;
+
+    .footer-content .footer-links a {
+      margin: 10px;
+      font-size: 14px;
+    }
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .contenedor-cartas {
+    grid-template-columns: 1fr;
+    gap: 10px;
+
+    .card {
+      h3 { font-size: 18px; }
+      max-width: 100%;
+    }
+  }
+
+    #carouselExampleCaptions {
+    padding: 0 15px;
+    }
+    .banderamid {
+  height: 25px;
+  background-color: white;
+  }
+  .banderabottomtop {
+  background-color: #74ACDF;
+  height: 25px;
+  align-content: center;
+  }
+  .footer {
+    padding: 10px;
+    margin-top: 20px;
+
+    .footer-content .footer-links a {
+      margin: 8px;
+      font-size: 13px;
+    }
+  }
+  .contact-box {
+  margin: 30px;
+  }
+}

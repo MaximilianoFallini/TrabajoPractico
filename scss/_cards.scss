@@ -3,60 +3,60 @@
 
 .contenedor-cartas {
   display: grid;
-  grid-template-columns: repeat(3, minmax(300px, 3fr));
-  grid-template-areas: "brownie lemonpie bizcochuelo";
-  gap: 5%;
-  margin: 30px;
-
-  .brownie { grid-area: brownie; }
-  .lemonpie { grid-area: lemonpie; }
-  .bizcochuelo { grid-area: bizcochuelo; }
+  grid-template-columns: repeat(3, minmax(200px, 1fr)); 
+  grid-auto-rows: min-content;  
+  gap: 20px;
+  margin: 30px auto;
+  max-width: 1200px; 
 
   .card {
-  display: block;             
-  text-decoration: none;      
-  color: inherit;             
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  overflow: hidden;           
-  background: #fff;
-  text-align: center;        
-  box-shadow: 2px 2px 8px rgba(0,0,0,0.15);     
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+    text-align: center;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.15);
+    width: 100%;
+    max-width: 350px; 
+    margin: 0 auto;
 
-  @include m.card-animation(-8px, rgba(0,0,0,0.25), -3px, rgba(0,0,0,0.2));
+    @include m.card-animation(-8px, rgba(0,0,0,0.25), -3px, rgba(0,0,0,0.2));
 
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 100%;       /* ocupa toda la columna del grid */
-  min-width: 250px;  /* evita que la carta se achique */
-  min-height: 300px; /* altura mínima */
-    img {                    
-        width: 100%;
-        height: 240px;               
-        object-fit: cover;          
-        }
-    h3 {                     
-    margin: 10px;
-    font-size: 18px;  
-        }
+    img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      flex-shrink: 0;
     }
-}
 
-@media (max-width: 800px) {
-  .contenedor-cartas {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: 
-      "brownie lemonpie"
-      "bizcochuelo bizcochuelo";
+    h3 {
+      margin: 10px;
+      font-size: 16px;
+      line-height: 1.3;
+    }
   }
 }
 
-/* Móvil */
-@media (max-width: 500px) {
-  .contenedor-cartas {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "brownie"
-      "lemonpie"
-      "bizcochuelo";
-  }
+@keyframes rubberBand {
+  0% { transform: scaleX(1); }
+  30% { transform: scaleX(1.25) scaleY(0.75); }
+  40% { transform: scaleX(0.75) scaleY(1.25); }
+  50% { transform: scaleX(1.15) scaleY(0.85); }
+  65% { transform: scaleX(.95) scaleY(1.05); }
+  75% { transform: scaleX(1.05) scaleY(.95); }
+  100% { transform: scaleX(1) scaleY(1); }
+}
+
+.rubberBand {
+  animation: rubberBand 1s;
+}
+
+.videotutorial {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%; 
 }

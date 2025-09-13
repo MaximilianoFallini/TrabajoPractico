@@ -1,4 +1,4 @@
-// mixins
+// mixins (card animation)
 @mixin card-animation($hover-y, $hover-shadow, $active-y, $active-shadow) {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 

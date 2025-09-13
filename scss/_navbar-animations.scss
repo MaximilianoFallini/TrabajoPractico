@@ -1,0 +1,25 @@
+// Navbar animation: underline
+.navbar-nav {
+  .nav-link {
+    position: relative;       
+    color: #000;              
+    display: inline-block;    
+    transition: color 0.3s;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -3px;            
+      width: 0;
+      height: 2px;
+      background-color: #74ACDF;
+      transition: width 0.3s ease;
+    }
+
+    &:hover::after,
+    &.active::after {
+      width: 100%;             
+    }
+  }
+}

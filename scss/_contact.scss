@@ -1,0 +1,19 @@
+// flexbox Contact
+.contact-flexbox {
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-box {
+  width: 100%;
+  max-width: 600px;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 30px;
+  border-radius: 15px;
+  color: #fff;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+}

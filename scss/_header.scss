@@ -13,10 +13,18 @@ header {
   justify-content: center;
   position: relative;
   top: -20px;
+& img {
+  transform: scale(1.15); 
+  transform-origin: center; 
+  }
 }
 
 .banderabottomtop {
   background-color: #74ACDF;
   height: 40px;
   align-content: center;
+}
+
+.h1hidden {
+  display: none;
 }
