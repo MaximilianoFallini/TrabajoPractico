@@ -2,54 +2,54 @@
 <html>
 
 <!--Metadatos-->
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DulceWeb - Recetas</title>
   <link rel="stylesheet" href="scss/main.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-  <link rel="icon" href="./images/sol-png.png">
+  <link rel="icon" href="images/sol-png.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 </head> 
 
+<!--Wallpaper-->
 <body background="images/wallpaper.avif">
+  <div class="content">
 
 <!--Encabezado-->
   <div class="banderabottomtop"></div>
     <div class="banderamid">
         <div class="sol">
-            <img src="./images/sol-png.png" alt="Sol" height="80">
+            <img src="./images/sol-dulceweb.png" alt="Logo de la Pagina Web" height="80">
         </div>
     </div>
   <div class="banderabottomtop"></div>
+  <h1 class="h1hidden">DulceWeb - Recetas y consejos de repostería</h1>
 
 <!--Menu Contextual-->
-  <nav class="navbar navbar-expand-lg navbar-light" style="
-    background-color: rgba(255, 255, 255, 0.05); 
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);">
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgba(255, 255, 255, 0.05); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">DuceWeb</a>
+      <a class="navbar-brand" href="#">
+        <img src="images/sol-png.png" alt="Logo DulceWeb" height="70" style="vertical-align: middle;">
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+            <a class="nav-link px-3 active" aria-current="page" href="#">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="practicas-higiene.html">Practicas y Higiene</a>
+            <a class="nav-link px-3" href="pages/practicas-higiene.html">Practicas y Higiene</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="sorbe-mi.html">Sobre mi</a>
+            <a class="nav-link px-3" href="pages/nosotros.html">Nosotros</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" aria-disabled="true"></a>
+            <a class="nav-link px-3" href="pages/contacto.html">Contacto</a>
           </li>
         </ul>
       </div>
@@ -57,57 +57,69 @@
   </nav>
 
 <!--Carousel-->
-<!--Carousel-->
-<div id="carouselExampleIndicators" class="carousel slide">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  <div id="carouselExampleCaptions" class="carousel slide" style="background-color: rgba(255, 255, 255, 0.05); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+
+    <div class="carousel-inner">
+<!-- Slide 1 -->
+      <div class="carousel-item active">
+        <img src="images/bizcochuelo.jpg" class="d-block w-100" alt="Bizcochuelo">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Bizcochuelo</h5>
+        </div>
+      </div>
+
+<!-- Slide 2 -->
+      <div class="carousel-item">
+        <img src="images/brownies.webp" class="d-block w-100" alt="Brownie">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Brownie</h5>
+        </div>
+      </div>
+
+<!-- Slide 3 -->
+      <div class="carousel-item">
+        <img src="images/lemon-pie.jpg" class="d-block w-100" alt="Lemon Pie">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Lemon Pie</h5>
+        </div>
+      </div>
+    </div>
+
+<!-- Controles -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Siguiente</span>
+    </button>
   </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <div class="slide-content">
-        <img src="images/brownies.webp" class="d-block" alt="Brownie">
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="slide-content">
-        <img src="images/lemon-pie.jpg" class="d-block" alt="Lemon-Pie">
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="slide-content">
-        <img src="images/bizcochuelo.jpg" class="d-block" alt="Bizcochuelo">
-      </div>
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
 
 <!--Grid para Cartas-->
-  <div class="contenedor-cartas">
+    <div class="contenedor-cartas">
+
 <!--Cartas-->
-    <a class="card brownie animate__animated animate__rubberBand" href="brownie.html">
-      <img src="images/brownies.webp" alt="Receta de Brownie">
-      <h3>Brownie</h3>
-    </a>
+      <a class="card brownie rubberBand" href="./pages/brownie.html">
+        <img src="images/brownies.webp" alt="Receta de Brownie">
+        <h3>Brownie</h3>
+      </a>
 
-    <a class="card bizcochuelo animate__animated animate__rubberBand" href="bizcochuelo.html">
-      <img src="images/bizcochuelo.jpg" alt="Receta de Bizcochuelo">
-      <h3>Bizcochuelo</h3>
-    </a>
+      <a class="card bizcochuelo rubberBand" href="./pages/bizcochuelo.html">
+        <img src="images/bizcochuelo.jpg" alt="Receta de Bizcochuelo">
+        <h3>Bizcochuelo</h3>
+      </a>
 
-    <a class="card lemonpie animate__animated animate__rubberBand" href="lemon-pie.html">
-      <img src="images/lemon-pie.jpg" alt="Receta de Lemon Pie">
-      <h3>Lemon Pie</h3>
-    </a>
+      <a class="card lemonpie rubberBand" href="./pages/lemon-pie.html">
+        <img src="images/lemon-pie.jpg" alt="Receta de Lemon Pie">
+        <h3>Lemon Pie</h3>
+      </a>
+    </div>
   </div>
 
 <!--Pie de Pagina-->
