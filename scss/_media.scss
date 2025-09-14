@@ -40,6 +40,12 @@
       font-size: 14px;
     }
   }
+  .sol {
+  top: -25px;
+    & img {
+      transform: scale(1.3)
+    }
+  }
 }
 
 /* Mobile */
@@ -77,5 +83,15 @@
   }
   .contact-box {
   margin: 30px;
+  }
+  .sol {
+  top: -31px;
+  
+    & img {
+      transform: scale(1.05)
+    }
+  }
+    .videotutorial {
+    height: 200px;
   }
 }
